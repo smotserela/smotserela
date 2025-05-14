@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MysticCraft – Store</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --primary: #6B2A8B;
+      --accent:  #E69500;
+      --bg-light:#f7f6f9;
+      --shadow:  rgba(0,0,0,0.1);
+    }
+    *, body { box-sizing:border-box; margin:0; padding:0; }
+    body {
+      font-family:'Poppins',sans-serif;
+      background: var(--bg-light);
+      color: #333;
+    }
+    /* Header styling – hergebruik je bestaande header-code */
+    .site-header {
+      position:sticky; top:0;
+      background:linear-gradient(135deg, var(--primary), #3A0E6F);
+      box-shadow:0 2px 6px var(--shadow);
+      z-index:100;
+    }
+    .header-inner {
+      max-width:1200px; margin:0 auto;
+      display:flex; align-items:center; justify-content:space-between;
+      padding:12px 20px;
+    }
+    .nav-links { list-style:none; display:flex; gap:20px; }
+    .nav-links a {
+      color:#fff; text-decoration:none; font-weight:500;
+      padding:6px 10px; border-radius:4px; transition:background .2s;
+    }
+    .nav-links a:hover,
+    .nav-links a.active {
+      background:var(--accent); color:#fff;
+    }
+
+    /* Store-grid */
+    .container {
+      max-width:900px; margin:40px auto; padding:0 20px;
+    }
+    .container h1 {
+      text-align:center; margin-bottom:20px;
+    }
+    .store-grid {
+      display:flex; flex-wrap:wrap; gap:20px; justify-content:center;
+    }
+    .card {
+      background:#fff; border-radius:8px;
+      box-shadow:0 2px 8px var(--shadow);
+      overflow:hidden; width:180px; text-align:center;
+      transition:transform .2s;
+    }
+    .card:hover {
+      transform:translateY(-4px);
+    }
+    .card img {
+      width:100%; height:auto;
+    }
+    .card-content {
+      padding:15px;
+    }
+    .card-content h3 {
+      margin:10px 0 5px; font-size:1.1em;
+    }
+    .card-content p {
+      margin:0 0 10px; font-size:0.95em; color:#555;
+    }
+    .card-content .label-event {
+      display:block; font-size:0.8em; color:#c00;
+      margin-bottom:8px;
+    }
+    .btn {
+      display:inline-block;
+      background:var(--accent);
+      color:#fff;
+      text-decoration:none;
+      padding:8px 16px;
+      border-radius:4px;
+      font-weight:600;
+      transition:background .2s;
+    }
+    .btn:hover {
+      background:#cf7b00;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER: hergebruik je site-header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="mysticcraft_logo.png" alt="MysticCraft" height="30">
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="regels.html">Regels</a></li>
+          <li><a href="staff.html">Staff</a></li>
+          <li><a href="vote.html">Vote</a></li>
+          <li><a href="store.html" class="active">Store</a></li>
+          <li><a href="support.html">Support</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- STORE CONTENT -->
+  <div class="container">
+    <h1>Store – Ranks</h1>
+    <div class="store-grid">
+
+      <!-- Enchanter -->
+      <div class="card">
+        <img src="enchanter.png" alt="Enchanter">
+        <div class="card-content">
+          <h3>Enchanter</h3>
+          <p>Tover de wereld met je krachten</p>
+          <a href="#" class="btn">Koop nu</a>
+        </div>
+      </div>
+
+      <!-- Magnus -->
+      <div class="card">
+        <img src="magnus.png" alt="Magnus">
+        <div class="card-content">
+          <h3>Magnus</h3>
+          <p>Voor de machtige magiërs</p>
+          <a href="#" class="btn">Koop nu</a>
+        </div>
+      </div>
+
+      <!-- Mystic -->
+      <div class="card">
+        <img src="mystic.png" alt="Mystic">
+        <div class="card-content">
+          <h3>Mystic</h3>
+          <p>Ongrijpbare krachten ontvouwen</p>
+          <a href="#" class="btn">Koop nu</a>
+        </div>
+      </div>
+
+      <!-- Wizart (event exclusive) -->
+      <div class="card">
+        <img src="wizart.png" alt="Wizart">
+        <div class="card-content">
+          <span class="label-event">Event Exclusive</span>
+          <h3>Wizart</h3>
+          <p>Unieke spreuken en toverkunst</p>
+          <a href="#" class="btn">Koop nu</a>
+        </div>
+      </div>
+
+      <!-- Archmage -->
+      <div class="card">
+        <img src="archmage.png" alt="Archmage">
+        <div class="card-content">
+          <h3>Archmage</h3>
+          <p>De ultieme meester der magie</p>
+          <a href="#" class="btn">Koop nu</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
