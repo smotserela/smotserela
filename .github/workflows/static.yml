@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MysticCraft – Coming Soon</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-p1Cm2V+XGnz+UZsiJQrIY7/PjGH6jZL9E1o2ZrxcVwuH+7rD0Hj5lo23r0skS0YJ9LLeWBaVrDzyV7n22EcYbg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <style>
+    :root {
+      --primary: #6B2A8B;
+      --accent: #E69500;
+      --text-light: #fff;
+      --bg-light: #f7f6f9;
+      --shadow: rgba(0,0,0,0.1);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg-light);
+      color: #333;
+      line-height: 1.6;
+    }
+    /* HEADER */
+    .site-header {
+      position: sticky;
+      top: 0;
+      background: linear-gradient(135deg, var(--primary), #3A0E6F);
+      box-shadow: 0 2px 6px var(--shadow);
+      z-index: 100;
+    }
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 20px;
+    }
+    .header-inner .logo img {
+      height: 40px;
+      transition: transform .2s;
+    }
+    .header-inner .logo img:hover {
+      transform: scale(1.05);
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    .nav-links a {
+      color: var(--text-light);
+      text-decoration: none;
+      font-weight: 500;
+      padding: 6px 10px;
+      border-radius: 4px;
+      transition: background .2s, color .2s;
+    }
+    .nav-links a:hover,
+    .nav-links a.active {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    /* HERO SECTION */
+    .hero-content {
+      max-width: 1200px;
+      margin: 40px auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .server-ip {
+      background: rgba(255,255,255,0.1);
+      padding: 15px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      text-align: center;
+      flex: 1;
+    }
+    .server-ip span {
+      display: block;
+      font-size: 1.2em;
+      font-weight: 700;
+      color: #fff;
+    }
+    .server-ip small {
+      display: block;
+      font-size: 0.9em;
+      opacity: 0.8;
+      margin-top: 3px;
+      color: #fff;
+    }
+    .discord-btn {
+      background: rgba(255,255,255,0.1);
+      padding: 15px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 700;
+      display: inline-block;
+      flex: 1;
+      text-align: center;
+    }
+    .discord-btn i {
+      vertical-align: middle;
+      margin-right: 8px;
+      color: #fff;
+    }
+    .member-count {
+      display: block;
+      font-size: 0.9em;
+      margin-top: 3px;
+      text-align: center;
+      opacity: 0.9;
+      color: #fff;
+    }
+    .logo img {
+      max-width: 200px;
+    }
+
+    /* NEWS SECTION */
+    .news-section {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .news-grid {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .card {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px var(--shadow);
+      overflow: hidden;
+      transition: transform .2s;
+      flex: 1 1 calc(33% - 20px);
+      min-width: 250px;
+    }
+    .card:hover { transform: translateY(-4px); }
+    .card img {
+      width: 100%;
+      display: block;
+    }
+    .card-content {
+      padding: 15px;
+    }
+    .card-content h3 { margin-bottom: 8px; }
+    .card-content p { font-size: 0.95em; color: #444; }
+
+    @media(max-width: 768px) {
+      .hero-content, .news-grid { flex-direction: column; }
+    }
+  </style>
+
+  <script>
+    function copyIP() {
+      alert("Server IP volgt binnenkort!");
+    }
+  </script>
+</head>
+
+<body>
+
+  <!-- UNIVERSELE HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="mysticcraft_logo.png" alt="MysticCraft">
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="regels.html">Regels</a></li>
+          <li><a href="staff.html">Staff</a></li>
+          <li><a href="vote.html">Vote</a></li>
+          <li><a href="store.html">Store</a></li>
+          <li><a href="support.html">Support</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO CONTENT -->
+  <section class="hero-content">
+    <div class="server-ip" onclick="copyIP()">
+      <i class="fas fa-clipboard"></i>
+      <span>COMING SOON</span>
+      <small>Server IP volgt binnenkort</small>
+    </div>
+    <div class="logo">
+      <img src="mysticcraft_logo.png" alt="MysticCraft Logo">
+    </div>
+    <a class="discord-btn" href="https://discord.gg/mysticcraft" target="_blank">
+      <i class="fab fa-discord"></i> JOIN DISCORD
+      <span class="member-count">3855 leden</span>
+    </a>
+  </section>
+
+  <!-- NEWS GRID -->
+  <section class="news-section">
+    <div class="news-grid">
+      <div class="card">
+        <img src="news1.jpg" alt="MysticCraft gelanceerd">
+        <div class="card-content">
+          <h3>12 mei 2025 – MysticCraft gelanceerd!</h3>
+          <p>Duik in een magische wereld vol avontuur.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="news2.jpg" alt="Magische Markt uitleg">
+        <div class="card-content">
+          <h3>1 apr. 2025 – Magische Markt uitleg</h3>
+          <p>Leer handelen als een echte tovenaar.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="news3.jpg" alt="Hoe join je MysticCraft">
+        <div class="card-content">
+          <h3>15 mrt. 2025 – Hoe join je MysticCraft?</h3>
+          <p>Java en Bedrock stap-voor-stap.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
